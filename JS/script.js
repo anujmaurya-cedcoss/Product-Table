@@ -54,7 +54,12 @@ function add() {
             output += "</tr>";
         }
         document.getElementById("output").innerHTML = output;
+        // removing the error message, if the current values are correct
         document.getElementById("error").innerHTML = "";
+        // removing the values from the field, once they're filled in the table
+        document.getElementById("prod-id").value = "";
+        document.getElementById("prod-name").value = "";
+        document.getElementById("prod-price").value = "";
     } else {
         console.log("error");
         document.getElementById("error").innerHTML = "Please enter correct values";

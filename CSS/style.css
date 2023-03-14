@@ -11,7 +11,7 @@ body {
 }
 
 .input__add {
-    margin-left: 45px;
+    margin: 0 0 15px 45px;
     padding: 10px 0 0 25px;
     height: 30px;
     width: 150px;
@@ -24,4 +24,7 @@ body {
 /* CSS for output */
 td {
     width: 150px;
+}
+#output {
+    margin: 0px 10px 0px 40px;
 }
