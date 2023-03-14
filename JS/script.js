@@ -18,7 +18,7 @@ function verifyName(val) {
     let ret = (n >= 1);
     let space = false;
     for(let i = 0; i < n; i++) {
-        if((val[i] >= 'a' && val[i] <= 'z') || (val[i] >= 'A' && val[i] <= 'Z') || (val[i] >= '0' && val[i] <= '9')) {
+        if((val[i] >= 'a' && val[i] <= 'z') || (val[i] >= 'A' && val[i] <= 'Z')) {
             continue;
         } else if(!space){
             // only 1 space is allowed between name
