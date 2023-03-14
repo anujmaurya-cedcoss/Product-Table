@@ -1,5 +1,5 @@
 const table = [["Product Id", "Product Name", "Product Price"]];
-
+// function to verify id
 function verifyID(val) {
     let n = val.length;
     let ret = (n >= 1);
@@ -12,7 +12,7 @@ function verifyID(val) {
     }
     return ret;
 }
-
+// function to verify name
 function verifyName(val) {
     let n = val.length;
     let ret = (n >= 1);
@@ -29,7 +29,7 @@ function verifyName(val) {
     }
     return ret;
 }
-
+// function to verify price
 function verfiyPrice(val) {
     return !(val <= 0 || val.length < 1);
 }
