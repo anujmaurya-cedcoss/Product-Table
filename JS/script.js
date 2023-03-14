@@ -1,0 +1,62 @@
+const table = [["Product Id", "Product Name", "Product Price"]];
+
+function verifyID(val) {
+    let n = val.length;
+    let ret = (n >= 1);
+    for(let i = 0; i < n; i++) {
+        if((val[i] >= 'a' && val[i] <= 'z')|| (val[i] >= 'A' && val[i] <= 'Z') || val[i] == '_' || (val[i] >= '0' && val[i] <= '9')) {
+            continue;
+        } else {
+            ret = false;
+        }
+    }
+    return ret;
+}
+
+function verifyName(val) {
+    let n = val.length;
+    let ret = (n >= 1);
+    let space = false;
+    for(let i = 0; i < n; i++) {
+        if((val[i] >= 'a' && val[i] <= 'z') || (val[i] >= 'A' && val[i] <= 'Z') || (val[i] >= '0' && val[i] <= '9')) {
+            continue;
+        } else if(!space){
+            // only 1 space is allowed between name
+            space = true;
+        } else {
+            ret = false;
+        }
+    }
+    return ret;
+}
+
+function verfiyPrice(val) {
+    return !(val <= 0 || val.length < 1);
+}
+function add() {
+    const id = document.getElementById("prod-id").value;
+    const name = document.getElementById("prod-name").value;
+    const price = document.getElementById("prod-price").value;
+
+    console.log(verifyID(id));
+    console.log(verifyName(name));
+    console.log(verfiyPrice(price));
+    if(verfiyPrice(price) && verifyID(id) && verifyName(name)) {
+        // after verification
+        table.push([id, name, "USD "+price]);
+        let output = "";
+        let n = table.length;
+        for(let i = 0; i < n; i++) {
+            output += "<tr>"
+            output += "<td>" + table[i][0] + "</td>"
+            output += "<td>" + table[i][1] + "</td>"
+            output += "<td>" + table[i][2] + "</td>"
+            output += "</tr>";
+        }
+        document.getElementById("output").innerHTML = output;
+        document.getElementById("error").innerHTML = "";
+    } else {
+        console.log("error");
+        document.getElementById("error").innerHTML = "Please enter correct values";
+    }
+}

@@ -13,26 +13,28 @@
       <ul class="input__ul">
         <li class="input__li">
           <label for="prod-id"
-            >Product ID &emsp;&emsp;&nbsp;<input type="text"
+            >Product ID &emsp;&emsp;&nbsp;<input type="text" id = "prod-id"
           /></label>
         </li>
         <li class="input__li">
           <label for="prod-name"
-            >Product Name &nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+            >Product Name &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id = "prod-name"
           /></label>
         </li>
         <li class="input__li">
           <label for="prod-price">
-            Product Price &emsp;&nbsp;<input type="number"
+            Product Price &emsp;&nbsp;<input type="number" id = "prod-price"
           /></label>
         </li>
       </ul>
-      <div class="input__add">ADD PRODUCT</div>
+      <div class="input__add" onclick="add()">ADD PRODUCT</div>
     </div>
 
     <!-- output section -->
-    <div class = "output">
-        
+    <div>
+        <table id = "output">
+        </table>
+        <h4 style="color: red"; id = "error"></h4>
     </div>
   </body>
   <script src="./JS/script.js"></script>

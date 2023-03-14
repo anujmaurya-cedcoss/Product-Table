@@ -22,6 +22,6 @@ body {
     color : white;
 }
 /* CSS for output */
-.output {
-    display : flex;
+td {
+    width: 150px;
 }
