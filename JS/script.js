@@ -37,10 +37,6 @@ function add() {
     const id = document.getElementById("prod-id").value;
     const name = document.getElementById("prod-name").value;
     const price = document.getElementById("prod-price").value;
-
-    console.log(verifyID(id));
-    console.log(verifyName(name));
-    console.log(verfiyPrice(price));
     if(verfiyPrice(price) && verifyID(id) && verifyName(name)) {
         // after verification
         table.push([id, name, "USD "+price]);
